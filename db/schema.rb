@@ -67,6 +67,7 @@ ActiveRecord::Schema.define(version: 20131223055923) do
     t.integer  "invitation_limit"
     t.integer  "invited_by_id"
     t.string   "invited_by_type"
+    t.integer  "roles_mask"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

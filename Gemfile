@@ -38,6 +38,7 @@ gem 'devise_uid'
 gem 'devise_account_expireable'
 gem 'devise_invitable'
 gem 'cancan'
+gem 'role_model'
 
 # ActiveAdmin
 gem 'activeadmin', github: 'gregbell/active_admin'

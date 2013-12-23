@@ -50,6 +50,9 @@ class DeviseCreateAdminUsers < ActiveRecord::Migration
       t.integer  :invited_by_id
       t.string   :invited_by_type
 
+      ## RoleModel
+      t.integer :roles_mask
+
       t.timestamps
     end
 

@@ -1,5 +1,5 @@
 ActiveAdmin.register AdminUser do
-  permit_params :email, :password, :password_confirmation
+  permit_params :email, :password, :password_confirmation, :roles
 
   index do
     column :email
@@ -16,7 +16,9 @@ ActiveAdmin.register AdminUser do
       f.input :email
       f.input :password
       f.input :password_confirmation
+      f.input :roles, as: :select, collection: AdminUser.secure_roles.map { |r| r.capitalize }, include_blank: false
     end
+
     f.actions
   end
 
