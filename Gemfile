@@ -32,6 +32,16 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+# Authentication
+gem 'devise'
+gem 'devise_uid'
+gem 'devise_account_expireable'
+gem 'devise_invitable'
+gem 'cancan'
+
+# ActiveAdmin
+gem 'activeadmin', github: 'gregbell/active_admin'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
