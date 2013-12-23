@@ -40,8 +40,10 @@ class Ability
   def admin
     can :read, ActiveAdmin::Page, :name => 'Dashboard'
 
-    can :manage, AdminUser
-    cannot :manage, AdminUser, :roles_mask => 1
+    roles_mask = AdminUser.mask_for AdminUser.secure_roles
+    can :manage, AdminUser, [ "roles_mask & ? != 0",  roles_mask] do |admin_user|
+      admin_user.roles_mask & roles_mask != 0
+    end
   end
 
   def developer
